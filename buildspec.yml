@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing NGINX...
+      - apt-get update
+      - apt-get install nginx -y
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Copying files...
+      - cp index.html /var/www/html/
+      - cp style.css /var/www/html/ || true
+      - cp script.js /var/www/html/ || true
+
+  post_build:
+    commands:
+      - echo Starting NGINX...
+      - service nginx start
+
+artifacts:
+  files:
+    - "**/*"

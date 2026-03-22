@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS DevOps App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>🚀 AWS DevOps Web App</h1>
+    <p class="subtitle">Deployed via CI/CD Pipeline on AWS</p>
+
+    <!-- Button -->
+    <button onclick="showMessage()">Click Me</button>
+
+    <!-- Message -->
+    <p id="message" class="card"></p>
+
+    <!-- Live Time -->
+    <div class="card">
+      <h3>⏰ Current Time</h3>
+      <p id="time"></p>
+    </div>
+
+    <!-- Deployment Info -->
+    <div class="card">
+      <h3>📦 Deployment Info</h3>
+      <p id="deploy">Version: v1.0 | EC2 + CodeDeploy</p>
+    </div>
+
+    <!-- Visitor Counter -->
+    <div class="card">
+      <h3>👥 Visitors</h3>
+      <p id="counter"></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>>
